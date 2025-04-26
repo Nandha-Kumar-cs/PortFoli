@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap");
+:root {
+  --bg-color: #0a192f;
+  --green-color: #64ffda;
+  --light_slate: #ccd6f6;
+  --header-fz-size: 13px;
+}
+.header-navbar {
+  background-color: var(--bg-color) !important;
+  font-size: var(--header-fz-size) !important;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.navbar-brand {
+  color: var(--green-color);
+}
+
+.nav-link {
+  color: var(--light_slate);
+}
+.nav-link span {
+  color: var(--green-color);
+}
+.nav-item-resume button {
+  background: transparent !important;
+  border: 1px solid var(--green-color) !important;
+  color: var(--green-color);
+}
+.nav-link.active {
+  color: var(--green-color) !important;
+}
+.nav-link:hover {
+  color: var(--green-color) !important;
+}
+.navbar-brand:hover {
+  color: var(--green-color);
+}
+
+/* text-effect */
+.glitch-text {
+  font-size: 2.5rem; /* adjust size for navbar */
+  font-weight: bold;
+  position: relative;
+  color: #fff;
+  animation: glitch 2s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: "NK"; /* use element text dynamically */
+  position: absolute;
+  top: 5px;
+  left: 0;
+  background: transparent;
+  animation: glitch 2s infinite;
+}
+
+.glitch-text::before {
+  color: var(--green-color);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.glitch-text::after {
+  color: var(--light_slate);
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+}
+header {
+  height: 60px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.container {
+  display: flex;
+  height: calc(100% - 60px); /* subtract header height */
+}
+
+.sidebar {
+  width: 150px;
+  background-color: #ccc;
+  position: relative;
+}
+
+.sidebar.left::after,
+.sidebar.right::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* height of fixed bottom content */
+  background-color: #aaa;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.spacer {
+  height: 2000px; /* just for scrolling demo */
+}

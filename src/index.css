@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+:root {
+  --bg-color: #0a192f;
+  --green-color: #64ffda;
+  --light_slate: #ccd6f6;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui,
+    sans-serif;
+}
+header {
+  background-color: var(--bg-color) !important;
+}
