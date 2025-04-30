@@ -4,6 +4,7 @@
   --green-color: #64ffda;
   --light_slate: #ccd6f6;
   --header-fz-size: 13px;
+  --light-navy:#112240;
 }
 .header-navbar {
   background-color: var(--bg-color) !important;
@@ -123,3 +124,95 @@ header {
 .spacer {
   height: 2000px; /* just for scrolling demo */
 }
+.offcanvas {
+  background-color: var(--light-navy);
+}
+.custom-close {
+  color: var(--green-color) !important;
+}
+.custom-offcanvas {
+  width: 75% !important;
+}
+/* Toggler button container (styled as a square) */
+.navbar-toggler {
+  border: 1px solid var(--green-color) !important;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Default hamburger icon */
+.navbar-toggler-icon {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: var(--green-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* First line: 100% width */
+.navbar-toggler-icon::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--green-color);
+  transition: all 0.3s ease-in-out;
+}
+.custom-close {
+  filter: invert(82%) sepia(18%) saturate(743%) hue-rotate(120deg) brightness(103%) contrast(101%) !important;
+  opacity: 1;
+}
+
+/* Second line: 70% width */
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 70%;
+  height: 2px;
+  background-color: var(--green-color);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Toggle state when clicked */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+/* Animation: Lines become 'X' on click */
+.navbar-toggler.collapsed .navbar-toggler-icon::before {
+  top: 0;
+  width: 100%;
+  transform: rotate(45deg);
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon::after {
+  top: 0;
+  width: 100%;
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  transform: rotate(180deg);
+}
+
+/* Optional: To change the width of the lines */
+.navbar-toggler.collapsed .navbar-toggler-icon::before {
+  width: 100%;
+}
+
+.navbar-toggler.collapsed .navbar-toggler-icon::after {
+  width: 100%;
+}
+
+.navbar-brand{
+  font-size: clamp(40px , 3vh , 50px);
+}
+
