@@ -1,11 +1,14 @@
 import { FolioHeader } from "./components/FolioHeader.jsx";
-import "./App.css";
+
 import { About } from "./components/About.jsx";
+import { AboutMe } from "./components/AboutMe.jsx";
+
 export default function App() {
   return (
     <>
       <FolioHeader />
       <About />
+      <AboutMe/>  
     </>
   );
 }

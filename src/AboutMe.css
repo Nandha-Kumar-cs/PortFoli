@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap");
+:root {
+  --bg-color: #0a192f;
+  --green-color: #64ffda;
+  --light_slate: #ccd6f6;
+  --about-fz-size: 32x;
+  --lightest-slate: #ccd6f6;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --fz-xxs: 10px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.aboutMe-container {
+  height: 80vh !important;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+.aboutMe-container article {
+  max-width: 80% !important;
+}
+
+.section-head-aboutMe p:first-child {
+  /* font-size: clamp(26px, 5vw, var(--about-fz-size));      */
+  font-size: 28px;
+  /* line-height: 1.1; */
+  color: var(--light_slate);
+  font-weight: 600;
+  /* position: relative; */
+}
+
+.section-head-aboutMe p:first-child::before {
+  position: relative;
+
+  counter-increment: section 1;
+
+  content: "0" counter(section) ".";
+
+  margin-right: 10px;
+  top: 1vh;
+  color: var(--green-color);
+
+  font-family: var(--font-mono);
+
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+
+  font-weight: 400;
+}
+.section-head-aboutMe p:first-child::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 2vh;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--lightest-navy);
+}
+
+.section-head-aboutMe p span:nth-child(2) {
+  color: var(--lightest-slate);
+  font-size: var(--about-fz-size);
+  font-weight: bold;
+}
+.section-head-aboutMe p:nth-child(2) {
+  color: var(--slate);
+  /* word-spacing: -; */
+}
+.section-head-aboutMe p:nth-child(3) {
+  word-spacing: -5px;
+  color: var(--slate);
+}
+
+.section-head-aboutMe p:nth-child(2) span {
+  color: var(--green-color) !important;
+}
+
+.section-head-aboutMe p:nth-child(4),
+.section-head-aboutMe p:nth-child(5) {
+  color: var(--slate);
+  word-spacing: -5px;
+}
+
+.triangle-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+/* 2 columns on md (768px and up), 1 column on smaller screens */
+@media (min-width: 768px) {
+  .triangle-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* List item styling */
+.triangle-list li {
+  position: relative;
+  font-size: 13px;
+  color: var(--slate);
+  border-radius: 6px;
+  padding: 0 1.5rem 0 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Triangle bullet */
+.triangle-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 5px solid var(--green-color);
+}
+@media (min-width: 1400px) {
+  .profile-pic-box {
+    width: 15vw;
+    height: 35vh;
+    margin-left: 30%;
+    margin-top: 30%;
+    position: relative;
+    z-index: 0;
+    border: 3px solid var(--green-color);
+  }
+  .profile-pic-overlay {
+    position: absolute;
+    width: 15vw;
+    height: 35vh;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -5%;
+    left: -5%;
+    z-index: 1;
+    background-image: linear-gradient(rgba(100, 255, 218, 0.5)),
+      /* 0.3 = 30% opacity */ url("../public/profile_pic_2.jpg");
+    transition: all 0.3 ease;
+  }
+  .profile-pic-overlay:hover {
+    background-image: url("../public/profile_pic_2.jpg");
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .triangle-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutMe-container article {
+    max-width: 100% !important;
+  }
+  .triangle-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-head-aboutMe p:first-child {
+    font-size: Clamp(var(--fz-md), 20vh, var(--fz-xxl));
+  }
+  .section-head-aboutMe p:nth-child(2) {
+    font-size: 15px;
+  }
+
+  .section-head-aboutMe p:first-child::before {
+    position: relative;
+
+    counter-increment: section 1;
+
+    content: "0" counter(section) ".";
+
+    margin-right: 10px;
+
+    color: var(--green-color);
+
+    font-family: var(--font-mono);
+
+    font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+
+    font-weight: 400;
+  }
+  .section-head-aboutMe p:first-child::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 1vh;
+    width: 150px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: var(--lightest-navy);
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-head-aboutMe p:first-child::before {
+    position: relative;
+
+    counter-increment: section 1;
+
+    content: "0" counter(section) ".";
+
+    margin-right: 10px;
+
+    color: var(--green-color);
+
+    font-family: var(--font-mono);
+
+    font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+
+    font-weight: 400;
+  }
+  .section-head-aboutMe p:first-child::after {
+    content: "";
+    display: block;
+    position: relative;
+    top:3vh;
+    width: 300px;
+    height: 1px;
+    margin-left: 10px;
+    background-color: var(--lightest-navy);
+  }
+}

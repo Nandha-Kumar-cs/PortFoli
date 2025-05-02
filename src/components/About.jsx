@@ -3,8 +3,9 @@ export function About() {
   return (
     <>
       <div
-        className="about-container container d-flex justify-content-center align-items-center"
+        className="about-container container d-flex   align-items-center animate__animated animate__fadeInDown "
         id="about-container"
+      
       >
         <article className="mx-2">
           <section>Hi, my name is</section>
@@ -17,7 +18,7 @@ export function About() {
             experiences.
           </section>
           <section>
-            <button className="btn mt-md-5">Discover My Work !</button>
+           <a href="#aboutMe-container"> <button className="btn mt-md-5">Discover My Work !</button></a>
           </section>
         </article>
       </div>

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-
+import "../App.css";
 export function FolioHeader() {
-  const [active, setActive] = useState("about");
+  const [active, setActive] = useState(null);
 
   return (
     <>
-      <nav className="navbar navbar-expand-md header-navbar  mx-md-4 mt-md-2">
+      <nav className="navbar navbar-expand-md header-navbar  mx-md-4 mt-md-2 fixed-top ">
         <div className="container-fluid">
           <a className="navbar-brand " href="#">
             <img src="../../public/n_icon_2.png" alt="" width={50} />
@@ -28,12 +28,13 @@ export function FolioHeader() {
             id="navbarNav"
           >
             <ul className="navbar-nav ms-auto align-items-center justify-content-end">
+            
               {[
                 {
-                  id: "about",
+                  id: "aboutMe",
                   label: "About",
                   no: "01.",
-                  link: "#about-container",
+                  link: "#aboutMe-container",
                 },
                 {
                   id: "Experience",
@@ -111,10 +112,10 @@ export function FolioHeader() {
               <ul className="navbar-nav d-flex ">
                 {[
                   {
-                    id: "about",
+                    id: "aboutMe",
                     label: "About",
                     no: "01.",
-                    link: "#about-container",
+                    link: "#aboutMe-container",
                   },
                   {
                     id: "Experience",
