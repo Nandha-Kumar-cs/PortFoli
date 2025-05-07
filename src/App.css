@@ -6,8 +6,13 @@
   --header-fz-size: 13px;
   --light-navy:#112240;
 }
+#navbar{
+  transition: top 0.3s;
+  margin-top: 0;
+  height:10%;
+}
 .header-navbar {
-  background-color: var(--bg-color) !important;
+  background-color: var(--bg-color) !important; 
   font-size: var(--header-fz-size) !important;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }

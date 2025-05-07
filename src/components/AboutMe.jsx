@@ -3,7 +3,7 @@ export function AboutMe() {
   return (
     <>
       <div
-        className="aboutMe-container container px-sm-0 px-md-5 justify-content-center "
+        className="aboutMe-container container px-sm-0 px-md-5 justify-content-center align-items-md-center"
         id="aboutMe-container"
       >
         <article className="d-flex w-100 flex-column flex-md-row">
@@ -27,7 +27,7 @@ export function AboutMe() {
             </p>
             <p>What's in my dev toolbox these days? Glad you asked !</p>
             <p>
-              <ul class="triangle-list">
+              <ul className="triangle-list">
                 <li>php</li>
                 <li>laravel</li>
                 <li>jquery</li>

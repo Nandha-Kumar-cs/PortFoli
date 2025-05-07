@@ -9,8 +9,10 @@
 }
 
 .about-container {
-  height: 100vh !important;
+  margin-top: 14%;
+  height: 90% ;
   font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+
 }
 
 .about-container article section:first-child {

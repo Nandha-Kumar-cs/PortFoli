@@ -9,7 +9,8 @@
 body {
   background-color: var(--bg-color);
   font-family: "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui,
-    sans-serif;
+  sans-serif;
+  min-height: 100vh;
 }
 header {
   background-color: var(--bg-color) !important;

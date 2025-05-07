@@ -5,7 +5,7 @@ export function FolioHeader() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-md header-navbar  mx-md-4 mt-md-2 fixed-top ">
+      <nav className="navbar navbar-expand-md header-navbar px-md-4 px-md-2 fixed-top " id="navbar">
         <div className="container-fluid">
           <a className="navbar-brand " href="#">
             <img src="../../public/n_icon_2.png" alt="" width={50} />
@@ -28,7 +28,6 @@ export function FolioHeader() {
             id="navbarNav"
           >
             <ul className="navbar-nav ms-auto align-items-center justify-content-end">
-            
               {[
                 {
                   id: "aboutMe",
@@ -40,7 +39,7 @@ export function FolioHeader() {
                   id: "Experience",
                   label: "Experience",
                   no: "02.",
-                  link: "#about-container",
+                  link: "#work-container",
                 },
                 {
                   id: "Work",
@@ -121,7 +120,7 @@ export function FolioHeader() {
                     id: "Experience",
                     label: "Experience",
                     no: "02.",
-                    link: "#about-container",
+                    link: "#work-container",
                   },
                   {
                     id: "Work",
@@ -136,13 +135,14 @@ export function FolioHeader() {
                     link: "#about-container",
                   },
                 ].map((item) => (
-                  <li key={item.id} className="nav-item ">
+                  <li key={item.id} className="nav-item "  data-bs-dismiss="offcanvas">
                     <a
                       href={item.link}
                       className={`nav-link  fs-6${
                         active === item.id ? "active" : ""
                       }`}
                       onClick={() => setActive(item.id)}
+                     
                     >
                       <span>{item.no}</span> <p>{item.label}</p>
                     </a>
